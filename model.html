@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Модель - Волга</title>
+<meta name="description" content="Карточка модели «Волга»: характеристики, история, факты и галерея фотографий.">
+<meta name="theme-color" content="#F4EDE0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%238C1D18'/%3E%3Crect%20x='12'%20y='12'%20width='40'%20height='40'%20fill='none'%20stroke='%23C09A3E'%20stroke-width='4'/%3E%3C/svg%3E">
+<script>
+  try {
+    if (window.localStorage.getItem("volga.lang") === "en") {
+      document.documentElement.lang = "en";
+    }
+  } catch (error) {}
+</script>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="model">
+
+<a class="skip-link" href="#main" data-i18n="skip">Перейти к содержанию</a>
+
+<header class="site-header">
+  <div class="container site-header__edition">
+    <span data-i18n="header.edition">Издание № 1 · справочник моделей</span>
+    <span class="site-header__date" data-i18n="header.date">19 ноября 2026</span>
+  </div>
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">Волга</span>
+      <span class="brand__sub" data-i18n="brand.sub">Автомобильный архив · 1956-2026</span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация" data-i18n-aria="nav.label">
+      <a href="index.html" data-i18n="nav.home">Главная</a>
+      <a href="catalog.html" aria-current="page" data-i18n="nav.catalog">Каталог</a>
+      <a href="history.html" data-i18n="nav.history">История</a>
+      <a href="about.html" data-i18n="nav.about">Об издании</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Язык интерфейса" data-i18n-aria="lang.label">
+      <button type="button" class="lang__btn" data-lang-btn="ru" aria-pressed="true" lang="ru">RU</button>
+      <button type="button" class="lang__btn" data-lang-btn="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="model-page container">
+  <div id="model-root"></div>
+  <noscript>
+    <p class="noscript">Для карточки модели нужен JavaScript.</p>
+  </noscript>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div>
+      <p class="site-footer__mark">Волга</p>
+      <p class="site-footer__note" data-i18n="footer.note">Каталог собран по материалам Википедии и Викисклада. Фотографии используются по лицензиям, указанным в карточках моделей.</p>
+    </div>
+    <nav class="site-footer__nav" aria-label="Навигация в подвале" data-i18n-aria="footer.nav">
+      <a href="index.html" data-i18n="nav.home">Главная</a>
+      <a href="catalog.html" data-i18n="nav.catalog">Каталог</a>
+      <a href="history.html" data-i18n="nav.history">История</a>
+      <a href="about.html" data-i18n="nav.about">Об издании</a>
+    </nav>
+    <p class="site-footer__meta">1956-2026<br>Wikimedia Commons</p>
+  </div>
+</footer>
+
+</body>
+</html>

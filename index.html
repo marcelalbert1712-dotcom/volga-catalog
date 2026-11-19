@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Волга. Каталог автомобилей ГАЗ, 1956-2026</title>
+<meta name="description" content="Каталог автомобилей «Волга» Горьковского автозавода: шестнадцать моделей от ГАЗ-21 до линейки 2026 года, характеристики, фотографии и история.">
+<meta name="theme-color" content="#F4EDE0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%238C1D18'/%3E%3Crect%20x='12'%20y='12'%20width='40'%20height='40'%20fill='none'%20stroke='%23C09A3E'%20stroke-width='4'/%3E%3C/svg%3E">
+<script>
+  try {
+    if (window.localStorage.getItem("volga.lang") === "en") {
+      document.documentElement.lang = "en";
+    }
+  } catch (error) {}
+</script>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="home">
+
+<a class="skip-link" href="#main" data-i18n="skip">Перейти к содержанию</a>
+
+<header class="site-header">
+  <div class="container site-header__edition">
+    <span data-i18n="header.edition">Издание № 1 · справочник моделей</span>
+    <span class="site-header__date" data-i18n="header.date">19 ноября 2026</span>
+  </div>
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">Волга</span>
+      <span class="brand__sub" data-i18n="brand.sub">Автомобильный архив · 1956-2026</span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация" data-i18n-aria="nav.label">
+      <a href="index.html" aria-current="page" data-i18n="nav.home">Главная</a>
+      <a href="catalog.html" data-i18n="nav.catalog">Каталог</a>
+      <a href="history.html" data-i18n="nav.history">История</a>
+      <a href="about.html" data-i18n="nav.about">Об издании</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Язык интерфейса" data-i18n-aria="lang.label">
+      <button type="button" class="lang__btn" data-lang-btn="ru" aria-pressed="true" lang="ru">RU</button>
+      <button type="button" class="lang__btn" data-lang-btn="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <noscript>
+    <p class="noscript container">Для отображения каталога нужен JavaScript.</p>
+  </noscript>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__media">
+      <img id="hero-img" alt="" fetchpriority="high" decoding="async">
+    </div>
+    <div class="hero__veil" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="kicker hero__kicker" id="hero-kicker"></p>
+      <h1 class="hero__title" id="hero-title"></h1>
+      <p class="hero__lead" id="hero-lead"></p>
+      <p class="hero__meta" id="hero-meta"></p>
+      <div class="hero__actions">
+        <a class="btn btn--solid" href="model.html?id=gaz-21" data-i18n="home.heroCta">Смотреть модель</a>
+        <a class="btn btn--ghost" href="catalog.html" data-i18n="home.heroAll">Весь каталог</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Каталог в цифрах">
+    <div class="container">
+      <div class="stats__grid" id="stats-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="s1-title">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2 class="section__title" id="s1-title" data-i18n="home.s1title">Линия марки</h2>
+      </div>
+      <div class="split">
+        <div class="split__figure">
+          <p class="split__big" aria-hidden="true">16</p>
+          <p class="split__cap" data-i18n="home.s1cap">Каталог легковых автомобилей Горьковского автозавода</p>
+        </div>
+        <div class="split__body">
+          <p class="split__text" data-i18n="home.s1text">От послевоенной ГАЗ-21 до линейки 2026 года: шестнадцать моделей, пять линий и разные эпохи одного завода.</p>
+          <p class="split__text" data-i18n="home.s1text2">Основная линия шла к новой «Волге», параллельная держала номенклатуру, малая серия пробовала будущее, вернувшаяся марка начинает заново.</p>
+          <a class="split__link" href="catalog.html" data-i18n="home.s1link">Смотреть все модели</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="s2-title">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2 class="section__title" id="s2-title" data-i18n="home.s2title">От 1956 до 2026</h2>
+      </div>
+      <p class="page-lead" data-i18n="home.s2text">Семьдесят лет истории марки. Указатель по годам начала выпуска ведёт сразу к карточке модели.</p>
+      <div class="year-index" id="year-index"></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="s3-title">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2 class="section__title" id="s3-title" data-i18n="home.s3title">Техника и факты</h2>
+      </div>
+      <p class="page-lead" data-i18n="home.s3text">Три подробности из архива: автоматическая коробка, предкамерное зажигание и реечное рулевое управление.</p>
+      <div class="facts-grid" id="facts-grid"></div>
+    </div>
+  </section>
+
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="container cta__inner">
+      <div>
+        <h2 class="cta__title" id="cta-title" data-i18n="home.ctaTitle">Шестнадцать машин. Семьдесят лет.</h2>
+        <p class="cta__note" data-i18n="home.ctaNote">Каталог, фильтры, галереи</p>
+      </div>
+      <a class="btn btn--solid" href="catalog.html" data-i18n="home.ctaBtn">Открыть каталог</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div>
+      <p class="site-footer__mark">Волга</p>
+      <p class="site-footer__note" data-i18n="footer.note">Каталог собран по материалам Википедии и Викисклада. Фотографии используются по лицензиям, указанным в карточках моделей.</p>
+    </div>
+    <nav class="site-footer__nav" aria-label="Навигация в подвале" data-i18n-aria="footer.nav">
+      <a href="index.html" data-i18n="nav.home">Главная</a>
+      <a href="catalog.html" data-i18n="nav.catalog">Каталог</a>
+      <a href="history.html" data-i18n="nav.history">История</a>
+      <a href="about.html" data-i18n="nav.about">Об издании</a>
+    </nav>
+    <p class="site-footer__meta">1956-2026<br>Wikimedia Commons</p>
+  </div>
+</footer>
+
+</body>
+</html>
