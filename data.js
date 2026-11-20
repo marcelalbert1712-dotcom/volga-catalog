@@ -519,7 +519,7 @@ const VOLGA_MODELS = [
   {
     "id": "gaz3110",
     "slug": "gaz-3110",
-    "order": 9,
+    "order": 10,
     "name": "ГАЗ-3110 «Волга»",
     "nameEn": "GAZ-3110 Volga",
     "years": "1997–2004",
@@ -588,7 +588,7 @@ const VOLGA_MODELS = [
   {
     "id": "gaz3111",
     "slug": "gaz-3111",
-    "order": 10,
+    "order": 11,
     "name": "ГАЗ-3111 «Волга»",
     "nameEn": "GAZ-3111 Volga",
     "years": "1999–2004, малая серия",
@@ -657,7 +657,7 @@ const VOLGA_MODELS = [
   {
     "id": "gaz31105",
     "slug": "gaz-31105",
-    "order": 11,
+    "order": 12,
     "name": "ГАЗ-31105 «Волга»",
     "nameEn": "GAZ-31105 Volga",
     "years": "2004–2009",
@@ -726,7 +726,7 @@ const VOLGA_MODELS = [
   {
     "id": "gaz3105",
     "slug": "gaz-3105",
-    "order": 12,
+    "order": 9,
     "name": "ГАЗ-3105 «Волга»",
     "nameEn": "GAZ-3105 Volga",
     "years": "1992–1996, малая серия",

@@ -1576,7 +1576,7 @@ p {
   position: absolute;
   top: 10px;
   bottom: 10px;
-  left: 118px;
+  left: 112px;
   width: 1px;
   background: var(--line-strong);
 }
@@ -1594,7 +1594,7 @@ p {
   content: "";
   position: absolute;
   top: 33px;
-  left: 112px;
+  left: 107px;
   width: 11px;
   height: 11px;
   background: var(--paper);
@@ -1606,6 +1606,7 @@ p {
   font-family: var(--font-display);
   font-size: clamp(24px, 3vw, 34px);
   line-height: 1;
+  padding-right: 18px;
   text-align: right;
   color: var(--red);
 }
@@ -1671,6 +1672,15 @@ p {
 .about-page {
   max-width: 940px;
   padding-bottom: clamp(56px, 8vw, 96px);
+}
+
+.about-page {
+  max-width: 820px;
+}
+
+.about-page .page-head {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .about-body {
@@ -1902,6 +1912,7 @@ p {
   }
 
   .timeline__year {
+    padding-right: 0;
     text-align: left;
   }
 

@@ -1160,12 +1160,15 @@
     return html;
   }
 
-  function galleryHTML(model) {
+  function galleryHTML(model, heroPhoto) {
     var photos = model.photos || [];
     var html = "";
 
     for (var i = 0; i < photos.length; i += 1) {
       var photo = photos[i];
+      if (heroPhoto && photo.url === heroPhoto.url) {
+        continue;
+      }
       var meta = "";
       if (photo.page) {
         meta +=
@@ -1356,15 +1359,18 @@
     html += "</div>";
 
     if ((model.photos || []).length) {
-      html +=
-        '<section class="gallery-block" aria-labelledby="gallery-title">' +
-        '<h2 class="block__title" id="gallery-title">' +
-        esc(t("model.gallery")) +
-        "</h2>" +
-        '<div class="gallery">' +
-        galleryHTML(model) +
-        "</div>" +
-        "</section>";
+      var galleryItems = galleryHTML(model, photo);
+      if (galleryItems) {
+        html +=
+          '<section class="gallery-block" aria-labelledby="gallery-title">' +
+          '<h2 class="block__title" id="gallery-title">' +
+          esc(t("model.gallery")) +
+          "</h2>" +
+          '<div class="gallery">' +
+          galleryItems +
+          "</div>" +
+          "</section>";
+      }
     }
 
     html +=
