@@ -1621,6 +1621,8 @@ p {
 }
 
 .timeline__name {
+  display: inline-block;
+  padding: 4px 0;
   text-decoration: none;
 }
 
@@ -1649,7 +1651,8 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  margin-top: 12px;
+  min-height: 28px;
+  margin-top: 8px;
   font-family: var(--font-ui);
   font-size: 10px;
   font-weight: 700;
