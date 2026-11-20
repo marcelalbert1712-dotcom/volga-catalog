@@ -96,6 +96,7 @@
       "catalog.bodyCrossover": "Кроссовер",
       "catalog.all": "Все",
       "catalog.count": "Найдено: {n} из {total}",
+      "catalog.filtersToggle": "Фильтры",
       "catalog.reset": "Сбросить",
       "catalog.noPhoto": "Нет фото",
       "catalog.emptyTitle": "Ничего не найдено",
@@ -231,6 +232,7 @@
       "catalog.bodyCrossover": "Crossover",
       "catalog.all": "All",
       "catalog.count": "Found: {n} of {total}",
+      "catalog.filtersToggle": "Filters",
       "catalog.reset": "Reset",
       "catalog.noPhoto": "No photo",
       "catalog.emptyTitle": "Nothing found",
@@ -775,7 +777,65 @@
     document.title = t("meta.catalog");
     buildCatalogFilters();
     updateChips();
+    initFiltersToggle();
     applyCatalog();
+  }
+
+  function activeFilterCount() {
+    var count = 0;
+    if (state.line !== "all") {
+      count += 1;
+    }
+    if (state.body !== "all") {
+      count += 1;
+    }
+    if (state.decades.length) {
+      count += 1;
+    }
+    if (state.query.trim()) {
+      count += 1;
+    }
+    return count;
+  }
+
+  function updateFiltersToggle() {
+    var badge = document.getElementById("filters-count");
+    if (!badge) {
+      return;
+    }
+    var count = activeFilterCount();
+    badge.textContent = count ? String(count) : "";
+    badge.setAttribute("data-active", count ? "true" : "false");
+  }
+
+  function initFiltersToggle() {
+    var toggle = document.getElementById("filters-toggle");
+    var root = document.getElementById("catalog-root");
+    if (!toggle || !root) {
+      return;
+    }
+    var mq = window.matchMedia("(max-width: 760px)");
+
+    function sync() {
+      if (mq.matches) {
+        root.classList.add("filters-collapsed");
+        toggle.setAttribute("aria-expanded", "false");
+      } else {
+        root.classList.remove("filters-collapsed");
+        toggle.setAttribute("aria-expanded", "true");
+      }
+    }
+
+    toggle.addEventListener("click", function () {
+      var open = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", open ? "false" : "true");
+      root.classList.toggle("filters-collapsed", open);
+    });
+
+    if (mq.addEventListener) {
+      mq.addEventListener("change", sync);
+    }
+    sync();
   }
 
   function buildCatalogFilters() {
@@ -1019,6 +1079,7 @@
     }
 
     updateChips();
+    updateFiltersToggle();
   }
 
   function resetFilters() {

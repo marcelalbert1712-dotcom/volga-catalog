@@ -56,6 +56,12 @@
   <div class="container catalog">
     <div id="catalog-root">
 
+      <button type="button" class="filters-toggle" id="filters-toggle" aria-expanded="false" aria-controls="filter-form">
+        <span class="filters-toggle__label" data-i18n="catalog.filtersToggle">Фильтры</span>
+        <span class="filters-toggle__count" id="filters-count" aria-hidden="true"></span>
+        <span class="filters-toggle__icon" aria-hidden="true"></span>
+      </button>
+
       <form class="toolbar" id="filter-form" role="search" aria-label="Фильтры каталога" data-i18n-aria="catalog.filters">
         <div class="toolbar__row">
           <div class="field">
